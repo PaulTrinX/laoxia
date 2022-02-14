@@ -1,72 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>老夏过节好昂~</title>
-
-<link rel="stylesheet" href="css/style.css">
-	
-	
+    <meta charset="UTF-8">
+    <title>节日快乐</title>
 </head>
 <body>
+	
+<div id="text">
 
-
-	
-	
-	
-	
-	
-<div class="container">
-	<div class="glass">
-    <div class="shine"></div>
-  </div>
-	<div class="thorns">
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-	<div class="leaves">
-		<div></div>
-		<div></div>
-    <div></div>
-    <div></div>
-	</div>
-	<div class="petals">
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-		<div></div>
-	</div>
-  <div class="deadPetals">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="sparkles">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
 </div>
-
-
-
-	
-	
-  
 </body>
+<script>
+  let divTyping = document.getElementById('text')
+  let i = 0,
+    timer = 0,
+    str = '老夏节日快乐鸭'
+
+  function typing () {
+    if (i <= str.length) {
+      divTyping.innerHTML = str.slice(0, i++) + '_'
+      timer = setTimeout(typing, 200)
+    }
+    else {
+      divTyping.innerHTML = str//结束打字,移除 _ 光标
+      clearTimeout(timer)
+    }
+  }
+
+  typing()
+</script>
 </html>
